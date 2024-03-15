@@ -1,0 +1,7 @@
+<ul class="item-list store--item-list">
+  <app-item 
+  *ngFor="let item of items | async"
+  [item]="item"
+  (add)="addItem($event)"
+  ></app-item>
+</ul>

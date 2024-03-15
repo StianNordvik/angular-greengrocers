@@ -1,0 +1,11 @@
+<li *ngIf="item">
+    <img
+      class="cart--item-icon"
+      src="/assets/icons/{{item.id}}.svg"
+      alt="{{item.name}}"
+    />
+    <p>beetroot</p>
+    <button (click)="remove(item)" class="quantity-btn remove-btn center">-</button>
+    <span class="quantity-text center">{{ quantity }}</span>
+    <button (click)="add(item)" class="quantity-btn add-btn center">+</button>
+</li>

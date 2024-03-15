@@ -1,0 +1,9 @@
+<li *ngIf="item">
+    <div class="store--item-icon">
+        <img src="/assets/icons/{{item.id}}.svg" alt="{item.name}"/> 
+    </div>
+    <p>{{item.name.charAt(0).toUpperCase() + item.name.slice(1)}}</p>
+    <p>£{{ item.price.toFixed(2) }}</p>
+    <button (click)="addItem()">Add to cart</button>
+</li>
+
