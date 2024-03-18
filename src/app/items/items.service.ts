@@ -14,6 +14,6 @@ export class ItemsService {
 
   get items(): Promise<Item[]> {
     // @ts-ignore
-    return firstValueFrom(this.http.get(`${environment.apiUrl}groceries`))
+    return firstValueFrom(this.http.get<Item[]>(`${environment.apiUrl}groceries`))
   }
 }

@@ -1,3 +1,18 @@
+<div class="header">
+  <label for="filter">Filter By:</label>
+  <select id="filter" #selectFilter (change)="updateFilter(selectFilter.value)">
+    <option value="all">All</option>
+    <option value="fruit">Fruit</option>
+    <option value="vegetable">Vegetable</option>
+  </select>
+  <label for="sort">Sort by:</label>
+  <select id="sort" #selectSort (change)="sortItems(selectSort.value)">
+    <option value="name">Name</option>
+    <option value="price">Price</option>
+  </select>
+
+</div>
+
 <ul class="item-list store--item-list">
   <app-item 
   *ngFor="let item of items | async"
